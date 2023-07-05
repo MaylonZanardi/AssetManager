@@ -1,0 +1,53 @@
+{
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=SAP.SAM2110&ClientId=08ddb683-e9f9-4957-b85a-09a89c2c4738&ServerUrl=https://sandbox-vid88q0x-space-1-sap-sam2110.cfapps.us10.hana.ondemand.com&SapCloudPlatformEndpoint=https://sandbox-vid88q0x-space-1-sap-sam2110.cfapps.us10.hana.ondemand.com&AuthorizationEndpointUrl=https://sandbox-vid88q0x-space-1-sap-sam2110.cfapps.us10.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://sandbox-vid88q0x-space-1-sap-sam2110.cfapps.us10.hana.ondemand.com&TokenUrl=https://sandbox-vid88q0x-space-1-sap-sam2110.cfapps.us10.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
+	},
+	"CF": {
+		"Target": "https://api.cf.us10.hana.ondemand.com",
+		"Organization": "3ccf903c-c663-4b58-ac44-0ee9105ea786",
+		"Space": "4a1dabd8-4391-47b0-9d41-4641fa642783",
+		"Deploy": {
+			"Destination": [
+				{
+					"CF": "DEST_SAM2110_PPROP",
+					"MDK": "DEST_SAM2110_PPROP",
+					"URL": ""
+				},
+				{
+					"CF": "DEST_SAM2110_ONLINE_PPROP",
+					"MDK": "DEST_SAM2110_ONLINE_PPROP",
+					"URL": "/destinations/mobileservices"
+				},
+				{
+					"CF": "DEST_DIGITAL_SIGNATURE_PPROP",
+					"MDK": "DEST_DIGITAL_SIGNATURE_PPROP",
+					"URL": "/destinations/mobileservices"
+				}
+			],
+			"Name": "ns.SAPAssetManager",
+			"Version": "1.0.0",
+			"AppRouter": "standalone",
+			"WebClient": {
+				"Runtime": "production",
+				"URL": "https://mdk-webclient-runtime.cfapps.us10.hana.ondemand.com/runtime/"
+			},
+			"URL": "https://compa-ia-minera-antamina-s-a--sandbox-vid88q0x-space-1-26ed3257.cfapps.us10.hana.ondemand.com/nsSAPAssetManager"
+		}
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/3ccf903c-c663-4b58-ac44-0ee9105ea786/space/4a1dabd8-4391-47b0-9d41-4641fa642783",
+		"AppId": "SAP.SAM2110",
+		"Destination": [
+			"DEST_SAM2110_PPROP",
+			"DEST_SAM2110_ONLINE_PPROP"
+		]
+	},
+	"Build": {
+		"SourceMap": true,
+		"TSTarget": "es6",
+		"WMF": false
+	}
+}
